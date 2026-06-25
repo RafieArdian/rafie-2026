@@ -63,7 +63,7 @@ class ProjectPolicy
      */
     public function forceDelete(User $user, Project $project): bool
     {
-        return $user->can('{{ ForceDelete }}');
+        return $user->can('force_delete_project');
     }
 
     /**
@@ -71,7 +71,7 @@ class ProjectPolicy
      */
     public function forceDeleteAny(User $user): bool
     {
-        return $user->can('{{ ForceDeleteAny }}');
+        return $user->can('force_delete_any_project');
     }
 
     /**
@@ -79,7 +79,7 @@ class ProjectPolicy
      */
     public function restore(User $user, Project $project): bool
     {
-        return $user->can('{{ Restore }}');
+        return $user->can('restore_project');
     }
 
     /**
@@ -87,7 +87,7 @@ class ProjectPolicy
      */
     public function restoreAny(User $user): bool
     {
-        return $user->can('{{ RestoreAny }}');
+        return $user->can('restore_any_project');
     }
 
     /**
@@ -95,7 +95,7 @@ class ProjectPolicy
      */
     public function replicate(User $user, Project $project): bool
     {
-        return $user->can('{{ Replicate }}');
+        return $user->can('replicate_project');
     }
 
     /**
@@ -103,6 +103,6 @@ class ProjectPolicy
      */
     public function reorder(User $user): bool
     {
-        return $user->can('{{ Reorder }}');
+        return $user->can('reorder_project');
     }
 }

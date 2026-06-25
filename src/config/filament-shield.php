@@ -27,7 +27,7 @@ return [
     ],
 
     'panel_user' => [
-        'enabled' => false,
+        'enabled' => true,
         'name' => 'panel_user',
     ],
 
@@ -37,14 +37,14 @@ return [
             'view_any',
             'create',
             'update',
-            //            'restore',
-            //            'restore_any',
-            //            'replicate',
-            //            'reorder',
+            'restore',
+            'restore_any',
+            'replicate',
+            'reorder',
             'delete',
             'delete_any',
-            //            'force_delete',
-            //            'force_delete_any',
+            'force_delete',
+            'force_delete_any',
         ],
 
         'page' => 'page',
@@ -69,13 +69,10 @@ return [
 
         'pages' => [
             'Dashboard',
-            'EditProfilePage',
-            'Themes',
         ],
 
         'widgets' => [
-            'AccountWidget',
-            'FilamentInfoWidget',
+            'AccountWidget', 'FilamentInfoWidget',
         ],
 
         'resources' => [],

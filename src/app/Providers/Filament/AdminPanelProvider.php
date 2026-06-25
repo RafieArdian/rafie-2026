@@ -65,7 +65,8 @@ class AdminPanelProvider extends PanelProvider
                 //     ->icon('heroicon-m-user-circle'),
             ])
             ->plugins([
-                \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make()
+                
+               \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make()
                     ->gridColumns([
                         'default' => 2,
                         'lg' => 3,
@@ -79,6 +80,7 @@ class AdminPanelProvider extends PanelProvider
                         'default' => 2,
                         'lg' => 3,
                     ]),
+                    
                 \Hasnayeen\Themes\ThemesPlugin::make(),
                 \Njxqlus\FilamentProgressbar\FilamentProgressbarPlugin::make()->color('#29b'),
                 \DiogoGPinto\AuthUIEnhancer\AuthUIEnhancerPlugin::make()

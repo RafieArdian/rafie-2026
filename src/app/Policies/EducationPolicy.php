@@ -63,7 +63,7 @@ class EducationPolicy
      */
     public function forceDelete(User $user, Education $education): bool
     {
-        return $user->can('{{ ForceDelete }}');
+        return $user->can('force_delete_education');
     }
 
     /**
@@ -71,7 +71,7 @@ class EducationPolicy
      */
     public function forceDeleteAny(User $user): bool
     {
-        return $user->can('{{ ForceDeleteAny }}');
+        return $user->can('force_delete_any_education');
     }
 
     /**
@@ -79,7 +79,7 @@ class EducationPolicy
      */
     public function restore(User $user, Education $education): bool
     {
-        return $user->can('{{ Restore }}');
+        return $user->can('restore_education');
     }
 
     /**
@@ -87,7 +87,7 @@ class EducationPolicy
      */
     public function restoreAny(User $user): bool
     {
-        return $user->can('{{ RestoreAny }}');
+        return $user->can('restore_any_education');
     }
 
     /**
@@ -95,7 +95,7 @@ class EducationPolicy
      */
     public function replicate(User $user, Education $education): bool
     {
-        return $user->can('{{ Replicate }}');
+        return $user->can('replicate_education');
     }
 
     /**
@@ -103,6 +103,6 @@ class EducationPolicy
      */
     public function reorder(User $user): bool
     {
-        return $user->can('{{ Reorder }}');
+        return $user->can('reorder_education');
     }
 }
